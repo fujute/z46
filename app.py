@@ -1,6 +1,5 @@
 from flask import Flask
-from flask import render_template
-import datetime
+import dateime
 
 app = Flask(__name__)
 
@@ -8,5 +7,5 @@ app = Flask(__name__)
 def hello():
     now = datetime.datetime.now()
     print ("Azure TechKnight 26-Nov-2020", now)
-    userName = "Azure TechKnight : " + now.strftime("%X")
-    return render_template('index.html', title='Welcome', username=userName)
+    myText = "Hello, Azure " + now.strftime("%X")
+    return myText
